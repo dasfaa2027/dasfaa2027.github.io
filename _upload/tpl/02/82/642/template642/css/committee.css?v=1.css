@@ -1,0 +1,266 @@
+/* ============================================
+   Committee Page Styles
+   Import common styles first
+   ============================================ */
+@import url('style.css%3Fv=1.css');
+
+/* ============================================
+   Committee Page Specific Styles
+   ============================================ */
+.committee-section {
+    background: #fff;
+    padding: 80px 0;
+}
+
+/* Keep the Sponsors page in the project, but hide its site navigation entry for now. */
+.main-nav .nav-menu > li:has(> a[href*="Sponsors/list.htm"]) {
+    display: none;
+}
+
+/* Keep the Important Dates pages in the project, but hide their site navigation entry for now. */
+.main-nav li:has(> a[href*="ImportantDates/list.htm"]) {
+    display: none;
+}
+
+.committee-block {
+    margin-bottom: 60px;
+    scroll-margin-top: 80px;
+}
+
+.committee-block:last-child {
+    margin-bottom: 0;
+}
+
+.committee-block-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dasfaa-brand);
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--dasfaa-brand);
+}
+
+.committee-category {
+    margin-bottom: 50px;
+}
+
+.committee-category:last-child {
+    margin-bottom: 0;
+}
+
+.committee-category-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.committee-category-row .committee-category {
+    margin-bottom: 0;
+}
+
+.category-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--dasfaa-brand);
+    margin-bottom: 30px;
+    padding-left: 15px;
+    border-left: 4px solid var(--dasfaa-brand);
+}
+
+/* Organization Committees - Photo Style */
+.org-committees .committee-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.member-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.member-item:hover {
+    background: var(--dasfaa-hover-bg);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(8, 127, 140, 0.1);
+}
+
+.member-photo {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--dasfaa-brand);
+    background: #fff;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-initials {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8eefb;
+    color: var(--dasfaa-brand);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.member-info {
+    flex: 1;
+}
+
+.member-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dasfaa-brand);
+    margin-bottom: 8px;
+}
+
+.member-title {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.member-affiliation {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+.member-distinction {
+    font-size: 13px;
+    color: #666;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+/* Program Committees - List Style */
+.program-committees {
+    margin-top: 60px;
+    padding-top: 60px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.program-member-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 0;
+}
+
+.program-member-list li {
+    padding: 12px 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 3px solid var(--dasfaa-brand);
+    transition: all 0.2s;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.program-member-list li:hover {
+    background: var(--dasfaa-hover-bg);
+    transform: translateX(5px);
+    border-left-color: var(--dasfaa-brand-mid);
+}
+
+.program-member-list .member-name {
+    font-weight: 600;
+    color: var(--dasfaa-brand);
+    display: inline;
+    font-size: 15px;
+}
+
+.program-member-list .member-affiliation {
+    color: #666;
+    display: inline;
+    font-size: 15px;
+}
+
+/* Responsive Design for Committee Page */
+@media (max-width: 1024px) {
+    .org-committees .committee-members {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+    
+    .program-member-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .committee-section {
+        padding: 50px 0;
+    }
+    
+    .committee-block-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .category-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .org-committees .committee-members {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .member-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .member-photo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .program-member-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .committee-block-title {
+        font-size: 22px;
+    }
+    
+    .category-title {
+        font-size: 18px;
+    }
+    
+    .member-name {
+        font-size: 16px;
+    }
+    
+    .member-affiliation {
+        font-size: 14px;
+    }
+    
+    .program-member-list li {
+        font-size: 14px;
+    }
+}
+

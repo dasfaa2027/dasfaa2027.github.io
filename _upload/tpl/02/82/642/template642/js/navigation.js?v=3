@@ -1,0 +1,87 @@
+/**
+ * 导航菜单功能
+ * 包括移动端菜单切换和下拉菜单兼容性处理
+ */
+
+// Mobile Menu Toggle
+(function() {
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const nav = document.querySelector('.main-nav');
+    
+    if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('mobile-open');
+            toggle.classList.toggle('active');
+        });
+    }
+})();
+
+// Dropdown Menu - 为有下拉菜单的项添加类（兼容不支持 :has() 的浏览器）
+(function() {
+    const allMenuItems = document.querySelectorAll('.nav-menu > li');
+    const dropdowns = Array.from(allMenuItems).filter(li => li.querySelector('.dropdown-menu'));
+    
+    dropdowns.forEach(dropdown => {
+        dropdown.classList.add('has-dropdown-menu');
+    });
+})();
+
+// Mobile Dropdown Menu Toggle - 手机版点击一级菜单展开/收起二级菜单
+(function() {
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+    
+    function handleMobileMenuClick(e) {
+        if (!isMobile()) {
+            return; // 桌面版不处理
+        }
+        
+        const menuItem = e.currentTarget.closest('li');
+        const dropdown = menuItem.querySelector('.dropdown-menu');
+        
+        if (dropdown) {
+            e.preventDefault(); // 阻止链接跳转
+            e.stopPropagation();
+            
+            // 切换菜单展开/收起状态
+            menuItem.classList.toggle('menu-open');
+        }
+    }
+    
+    // 为所有有下拉菜单的一级菜单链接添加点击事件
+    function initMobileMenu() {
+        const menuLinks = document.querySelectorAll('.nav-menu > li.has-dropdown-menu > a, .nav-menu > li:has(.dropdown-menu) > a');
+        
+        menuLinks.forEach(link => {
+            // 移除旧的事件监听器（如果存在）
+            link.removeEventListener('click', handleMobileMenuClick);
+            // 添加新的事件监听器
+            link.addEventListener('click', handleMobileMenuClick);
+        });
+    }
+    
+    // 页面加载时初始化
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMobileMenu);
+    } else {
+        initMobileMenu();
+    }
+    
+    // 窗口大小改变时重新初始化（处理从桌面版切换到手机版的情况）
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            if (isMobile()) {
+                initMobileMenu();
+            } else {
+                // 桌面版时移除所有 menu-open 类
+                document.querySelectorAll('.nav-menu > li.menu-open').forEach(item => {
+                    item.classList.remove('menu-open');
+                });
+            }
+        }, 100);
+    });
+})();
+
