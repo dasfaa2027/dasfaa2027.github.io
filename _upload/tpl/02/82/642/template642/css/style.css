@@ -73,9 +73,20 @@ body {
 .logo-link {
     display: flex;
     align-items: center;
+    gap: 14px;
     text-decoration: none;
     color: #fff;
     transition: opacity 0.3s;
+}
+
+.logo-link::after {
+    content: "DASFAA 2027";
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    color: #fff;
+    white-space: nowrap;
 }
 
 .logo-link:hover {
@@ -1010,6 +1021,14 @@ body {
         padding: 8px 20px;
     }
 
+    .logo-link {
+        gap: 10px;
+    }
+
+    .logo-link::after {
+        font-size: 20px;
+    }
+
     .logo-image {
         height: 56px;
         max-width: 90px;
@@ -1190,6 +1209,15 @@ body {
 @media (max-width: 480px) {
     .header-container {
         padding: 6px 14px;
+    }
+
+    .logo-link {
+        gap: 8px;
+    }
+
+    .logo-link::after {
+        font-size: 16px;
+        letter-spacing: 0.04em;
     }
 
     .topics-grid {
