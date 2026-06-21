@@ -73,7 +73,7 @@ body {
 .logo-link {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 40px;
     text-decoration: none;
     color: #fff;
     transition: opacity 0.3s;
@@ -1022,7 +1022,7 @@ body {
     }
 
     .logo-link {
-        gap: 10px;
+        gap: 24px;
     }
 
     .logo-link::after {
@@ -1212,7 +1212,7 @@ body {
     }
 
     .logo-link {
-        gap: 8px;
+        gap: 16px;
     }
 
     .logo-link::after {
