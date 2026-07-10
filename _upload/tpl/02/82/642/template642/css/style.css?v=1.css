@@ -73,20 +73,33 @@ body {
 .logo-link {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 12px;
     text-decoration: none;
     color: #fff;
     transition: opacity 0.3s;
 }
 
-.logo-link::after {
-    content: "DASFAA 2027";
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
+.logo-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
     line-height: 1;
-    color: #fff;
     white-space: nowrap;
+}
+
+.logo-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+.logo-subtitle {
+    color: var(--dasfaa-text-on-dark-soft);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
 }
 
 .logo-link:hover {
@@ -94,8 +107,8 @@ body {
 }
 
 .logo-image {
-    height: 72px;
-    max-width: 116px;
+    height: 64px;
+    max-width: 64px;
     width: auto;
     display: block;
     object-fit: contain;
@@ -1022,16 +1035,20 @@ body {
     }
 
     .logo-link {
-        gap: 24px;
-    }
-
-    .logo-link::after {
-        font-size: 20px;
+        gap: 10px;
     }
 
     .logo-image {
-        height: 56px;
-        max-width: 90px;
+        height: 52px;
+        max-width: 52px;
+    }
+
+    .logo-title {
+        font-size: 20px;
+    }
+
+    .logo-subtitle {
+        font-size: 12px;
     }
     
     .mobile-menu-toggle {
@@ -1211,15 +1228,6 @@ body {
         padding: 6px 14px;
     }
 
-    .logo-link {
-        gap: 16px;
-    }
-
-    .logo-link::after {
-        font-size: 16px;
-        letter-spacing: 0.04em;
-    }
-
     .topics-grid {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -1230,8 +1238,20 @@ body {
     }
     
     .logo-image {
-        height: 45px;
-        max-width: 72px;
+        height: 42px;
+        max-width: 42px;
+    }
+
+    .logo-link {
+        gap: 9px;
+    }
+
+    .logo-title {
+        font-size: 18px;
+    }
+
+    .logo-subtitle {
+        font-size: 11px;
     }
     
     .banner-section {
