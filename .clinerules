@@ -1,0 +1,6 @@
+# Local Cline Rules
+
+- Keep shell commands short and single-purpose.
+- Avoid long-running or deeply recursive commands that may hang.
+- Run multi-step work as separate commands and inspect each result.
+- Prefer bounded searches and explicit timeouts when appropriate.

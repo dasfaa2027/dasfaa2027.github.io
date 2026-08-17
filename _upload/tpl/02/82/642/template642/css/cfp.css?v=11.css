@@ -34,15 +34,80 @@
 
 .cfp-section {
     background: #fff;
-    padding: 80px 0;
+    padding: 64px 0 76px;
     position: relative;
     z-index: 1;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    box-shadow: 0 3px 18px rgba(6, 59, 76, 0.08);
     margin: 0 20px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Article-style CFP layout: use the DASFAA teal palette, not the reference site's blue. */
+.cfp-section .section-title {
+    margin-bottom: 42px;
+}
+
+.wp_articlecontent {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.85;
+    text-align: justify;
+}
+
+.wp_articlecontent p {
+    margin: 0 0 1.1rem;
+}
+
+.wp_articlecontent h3 {
+    margin: 2.2em 0 0.85rem;
+    color: var(--dasfaa-brand);
+    font-size: 1.8rem;
+    line-height: 1.35;
+    font-weight: 700;
+    text-align: center;
+}
+
+.wp_articlecontent h4 {
+    margin: 1.35rem 0 0.65rem;
+    color: var(--dasfaa-brand-dark);
+    font-size: 1.35rem;
+    line-height: 1.45;
+    font-weight: 700;
+}
+
+.wp_articlecontent ul {
+    margin: 0 0 1.2rem;
+    padding-left: 1.45em;
+    list-style: disc;
+}
+
+.wp_articlecontent li {
+    margin: 0 0 0.35rem;
+    padding-left: 0.2rem;
+}
+
+.wp_articlecontent a {
+    color: var(--dasfaa-brand);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+    text-decoration: none;
+}
+
+.wp_articlecontent a:hover {
+    color: var(--dasfaa-brand-mid);
+    text-decoration: underline;
+}
+
+.wp_articlecontent p:last-child {
+    margin-top: 2.2rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(8, 127, 140, 0.2);
+    color: #555;
+    font-size: 0.92em;
+    text-align: left;
 }
 
 .content-block {
@@ -217,6 +282,20 @@
         padding: 50px 0;
         margin: 0 15px;
         border-radius: 8px;
+    }
+
+    .wp_articlecontent {
+        font-size: 17px;
+        line-height: 1.75;
+        text-align: left;
+    }
+
+    .wp_articlecontent h3 {
+        font-size: 1.55rem;
+    }
+
+    .wp_articlecontent h4 {
+        font-size: 1.2rem;
     }
     
     .content-block {
