@@ -110,6 +110,15 @@
     text-align: left;
 }
 
+.wp_articlecontent .submission-system p:last-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+    color: inherit;
+    font-size: inherit;
+    text-align: justify;
+}
+
 .content-block {
     margin-bottom: 40px;
     padding: 35px;
@@ -336,4 +345,3 @@
         text-align: center;
     }
 }
-
