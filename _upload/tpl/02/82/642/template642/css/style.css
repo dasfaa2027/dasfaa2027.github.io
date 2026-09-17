@@ -324,6 +324,10 @@ body {
     background: linear-gradient(135deg, rgba(6, 59, 76, 0.18) 0%, rgba(8, 127, 140, 0.16) 100%);
 }
 
+.banner-overlay-hero {
+    background: linear-gradient(135deg, rgba(6, 59, 76, 0.48) 0%, rgba(8, 127, 140, 0.42) 100%);
+}
+
 .banner-content {
     position: absolute;
     top: 50%;
@@ -1000,6 +1004,22 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--dasfaa-text-on-dark-faint);
     font-size: 13px;
+}
+
+.footer-bottom .image-attribution {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.footer-bottom a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.footer-bottom a:hover,
+.footer-bottom a:focus-visible {
+    color: #fff;
 }
 
 /* ============================================
