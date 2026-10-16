@@ -1555,3 +1555,91 @@ body {
 .main-nav .nav-menu > li:has(> a[href*="Sponsors/list.htm"]) {
     display: none;
 }
+
+/* Key Dates */
+.key-dates-section {
+    scroll-margin-top: 100px;
+    padding: 60px 0;
+    background: var(--dasfaa-hover-bg);
+    color: var(--dasfaa-brand-deep);
+}
+
+.key-dates-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.key-dates-heading .section-title {
+    margin: 0;
+    padding: 0 0 0 18px;
+    border-left: 6px solid var(--dasfaa-brand);
+    color: var(--dasfaa-brand-deep);
+    text-align: left;
+}
+
+.key-dates-heading .section-title::after {
+    display: none;
+}
+
+.key-dates-scroll {
+    overflow-x: auto;
+}
+
+.key-dates-scroll:focus-visible {
+    outline: 3px solid var(--dasfaa-brand);
+    outline-offset: 4px;
+}
+
+.key-dates-table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 18px;
+    text-align: center;
+}
+
+.key-dates-table th,
+.key-dates-table td {
+    border: 1px solid #99cbd1;
+    padding: 16px 12px;
+    vertical-align: middle;
+}
+
+.key-dates-table thead th {
+    background: var(--dasfaa-brand);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.key-dates-table tbody th {
+    font-weight: 700;
+}
+
+.key-dates-table time {
+    white-space: nowrap;
+}
+
+.key-dates-detail {
+    display: block;
+    font-size: 0.85em;
+}
+
+@media (max-width: 768px) {
+    .key-dates-section {
+        padding: 40px 0;
+    }
+
+    .key-dates-table {
+        font-size: 16px;
+    }
+
+    .key-dates-table thead th {
+        font-size: 18px;
+    }
+}
