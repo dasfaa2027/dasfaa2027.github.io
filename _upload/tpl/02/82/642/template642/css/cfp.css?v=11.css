@@ -61,7 +61,7 @@
     margin: 0 0 1.1rem;
 }
 
-.wp_articlecontent h3 {
+.wp_articlecontent :is(h2, h3) {
     margin: 2.2em 0 0.85rem;
     color: var(--dasfaa-brand);
     font-size: 1.8rem;
@@ -299,7 +299,7 @@
         text-align: left;
     }
 
-    .wp_articlecontent h3 {
+    .wp_articlecontent :is(h2, h3) {
         font-size: 1.55rem;
     }
 
